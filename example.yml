@@ -30,7 +30,7 @@ mocks:
       body:
         type: json
         json: {
-  "id": 1
+  "id": 1,
   "firstName": "firstName",
   "lastName": "lastName"
 }
