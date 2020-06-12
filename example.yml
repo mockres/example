@@ -9,39 +9,47 @@ collections:
 mocks:
   - summary: get patients
     description: get patients
-    request:
+    collections:
+      - patient
+    httpRequest:
       method: GET
       path: /patients
       queryParameters:
-        key: value
+        - key: test
+          value: value
       headers:
-        content: helllo
-      cookies:
-        content: helllo
-      body: content in body
-    response:
+        - key: header
+          value: value for header
+      body:
+        type: all
+    httpResponse:
       statusCode: 200
       headers:
-        content: helllo
-      cookies:
-        content: helllo
-      body: content in body
+        - key: response header
+          value: response value
+      body:
+        type: json
+        json: {
+  "id": 1
+  "firstName": "firstName",
+  "lastName": "lastName"
+}
   - summary: post a patient
     description: post a patient
-    request:
+    httpRequest:
       method: POST
       path: /patients
-      body: {
-  "firstName": "firname",
-  "lastnema": "lastname"
+      body:
+        type: json
+        json: {
+  "firstName": "firstName",
+  "lastName": "lastName"
 }
-    response:
+    httpResponse:
       statusCode: 200
-      headers:
-        content: helllo
-      cookies:
-        content: helllo
-      body: {
+      body:
+        type: json
+        json: {
   "id": "12",
   "firstName": "firname",
   "lastnema": "lastname"
