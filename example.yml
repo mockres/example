@@ -29,11 +29,11 @@ mocks:
           value: response value
       body:
         type: json
-        json: {
+        json: '{
   "id": 1,
   "firstName": "firstName",
   "lastName": "lastName"
-}
+}'
   - summary: post a patient
     description: post a patient
     httpRequest:
@@ -41,16 +41,16 @@ mocks:
       path: /patients
       body:
         type: json
-        json: {
+        json: '{
   "firstName": "firstName",
   "lastName": "lastName"
-}
+}'
     httpResponse:
       statusCode: 200
       body:
         type: json
-        json: {
+        json: '{
   "id": "12",
   "firstName": "firname",
   "lastnema": "lastname"
-}
+}'
