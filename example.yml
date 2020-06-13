@@ -1,6 +1,6 @@
 ---
-title: name of api, dd:
-description: very very long description
+title: name of api
+description: very very long description, jdjd: value
 collections:
   - name: user
     description: user collection
