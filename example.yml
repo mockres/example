@@ -1,5 +1,5 @@
 ---
-title: name of api
+title: name of api, dd:
 description: very very long description
 collections:
   - name: user
