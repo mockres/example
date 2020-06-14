@@ -25,7 +25,7 @@ mocks:
     httpResponse:
       statusCode: 200
       headers:
-        - key: response header
+        - key: responseheader
           value: response value
       body:
         type: json
